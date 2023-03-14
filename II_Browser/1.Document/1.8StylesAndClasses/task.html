@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Lorem, ipsum dolor.</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum laborum aliquam eaque illum error labore odio sit distinctio, ducimus non adipisci blanditiis voluptatum est id? Nisi fugiat sed aut similique deleniti quasi eos porro tempore aperiam
+        aliquam saepe nemo laboriosam nulla hic rerum, consequatur quos fugit adipisci non natus repellat, maxime assumenda provident velit. Quis nisi ipsa rem animi quibusdam, culpa enim placeat dolorem tempora nostrum maxime odio voluptatem, impedit
+        tempore quod esse! Facere blanditiis impedit illo voluptate accusantium enim, praesentium minima obcaecati sequi quas natus tempora earum totam, vero sed magnam. Distinctio quos voluptas, facere molestias consequatur amet mollitia cum impedit
+        accusantium, reprehenderit, assumenda ratione est ad. Aspernatur ipsam alias nihil dolorum praesentium totam error qui iste consequuntur, impedit optio id voluptatibus modi est, dolorem laboriosam magni aliquid expedita ipsa aperiam quis enim
+        ex laudantium molestiae. Animi provident repellendus explicabo asperiores ex necessitatibus ratione itaque quasi sint quia! Iure quasi provident exercitationem excepturi, recusandae eligendi soluta officiis eius suscipit eum architecto voluptatibus
+        deleniti repellat, magni optio nostrum molestias pariatur deserunt earum, dolorem hic aspernatur dignissimos! Exercitationem, id quas mollitia delectus asperiores possimus aperiam excepturi hic ducimus maxime suscipit sint dolores repellendus
+        numquam, nostrum sunt, ea quod esse aliquid est?</p>
+    <script>
+        function showNotification({
+            top = 0,
+            right = 0,
+            className,
+            html
+        }) {
+            let notification = document.createElement('div');
+            notification.className = "notification";
+            if (className) {
+                notification.classList.add(className);
+            }
+
+            notification.style.top = top + 'px';
+            notification.style.right = right + 'px';
+
+            notification.innerHTML = html;
+            document.body.append(notification);
+
+            setTimeout(() => notification.remove(), 1500);
+        }
+
+
+
+
+        showNotification({
+            top: 10,
+            right: 10,
+            html: 'Hello!',
+            className: "welcome"
+        });
+    </script>
+</body>
+
+</html>
